@@ -1,12 +1,11 @@
 getgenv().Config = {
         Dashboard = {
-            Enabled = false, -- Connect to Adopt Me dashboard To Control Script/View Stats (https://zekehub.com/dashboard/adoptme)
-            GroupName = "vps1", -- Group name for organizing accounts on dashboard
+            Enabled = true, -- Connect to Adopt Me dashboard To Control Script/View Stats (https://zekehub.com/dashboard/adoptme)
+            GroupName = "vps2", -- Group name for organizing accounts on dashboard
         },
-        BabyFarm = false, -- Does baby farm
-        AutoCertificate = false, -- Auto use Pet Handler Pro Certificate when less than 30 days remaining
+        BabyFarm = true, -- Does baby farm
         PetFarm = {
-            Enabled = false, -- Enables the Pet Farm
+            Enabled = true, -- Enables the Pet Farm
             FarmEggs = false, -- If true, equips eggs to hatch them. If false, equips regular pets
             BuyEggs = false, -- If FarmEggs is true and no eggs in inventory, buy eggs automatically
             EggTypes = {}, -- Which eggs to equip ({} = any egg, or {"cracked_egg", "royal_egg"} for specific)
@@ -16,10 +15,6 @@ getgenv().Config = {
             PrioritizeFriendship = false, -- If true, selects pets with higher friendship level first
             SelectiveFarm = false, -- If true, only farm pets in SelecatedPetTypes list
             SelectedPetTypes = {}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
-        },
-        EventFarm = {
-            CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
-            MochiNail = false, -- Automatically complete Mochi Nail event and buys the tool needed
         },
         AutoTrade = {
             Enabled = false, -- Enable auto trading
@@ -31,7 +26,6 @@ getgenv().Config = {
             Items = {}, -- Item IDs when TradeMode = "specific"
             ItemCounts = {}, -- Max count per item in Items array
             PetTypes = {}, -- {} = all, {"regular", "neon", "mega"}
-            PetVersionFilter = {}, -- Per-pet version filter e.g. {turtle = {"mega"}, whale = {"neon"}, cat = {"regular"}} - if pet listed here only those versions trade, otherwise falls back to global PetTypes
             Ages = {}, -- {} = all, {1, 2, 3, 4, 5, 6}
         },
         AutoNeon = {
@@ -103,9 +97,9 @@ getgenv().Config = {
         },
         Settings = {
             AutoShowUI = true, -- Load the UI on script start (main overlay disable for less memory usage)
-            ShowOverlay = false, -- Show stats overlay (disables 3D rendering)
-            ReduceGraphics = false, -- Reduce graphics quality to minimum
-            FPSCap = 0, -- FPS cap option (0 = uncapped)
+            ShowOverlay = true, -- Show stats overlay (disables 3D rendering)
+            ReduceGraphics = true, -- Reduce graphics quality to minimum
+            FPSCap = 3, -- FPS cap option (0 = uncapped)
             LureId = "ice_dimension_2025_ice_soup_bait" -- what lure to use for example: "ice_dimension_2025_ice_soup_bait"
         },
         Webhook = {
