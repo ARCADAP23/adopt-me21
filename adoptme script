@@ -42,8 +42,8 @@ getgenv().Config = {
             MaxPerType = {}, -- {} = unlimited, {dog = 2, cat = 1} = limits per pet type
         },
         AutoPotion = {
-            Enabled = false, -- Use age potions on pets to level them up
-            SelectedPets = {"lny_2026_fire_foal"}, -- Pet IDs to use potions on (empty = does nothing)
+            Enabled = true, -- Use age potions on pets to level them up
+            SelectedPets = {"sugarfest_2026_mochi_meow"}, -- Pet IDs to use potions on (empty = does nothing)
         },
         AutoBuy = {
             Enabled = false, -- Automatically buy items from shops
