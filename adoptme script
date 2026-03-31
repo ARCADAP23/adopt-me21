@@ -1,25 +1,20 @@
 getgenv().Config = {
         Dashboard = {
-            Enabled = false, -- Connect to Adopt Me dashboard To Control Script/View Stats (https://zekehub.com/dashboard/adoptme)
+            Enabled = true, -- Connect to Adopt Me dashboard To Control Script/View Stats (https://zekehub.com/dashboard/adoptme)
             GroupName = "vps1", -- Group name for organizing accounts on dashboard
         },
-        BabyFarm = false, -- Does baby farm
-        AutoCertificate = false, -- Auto use Pet Handler Pro Certificate when less than 30 days remaining
+        BabyFarm = true, -- Does baby farm
         PetFarm = {
-            Enabled = false, -- Enables the Pet Farm
+            Enabled = true, -- Enables the Pet Farm
             FarmEggs = false, -- If true, equips eggs to hatch them. If false, equips regular pets
-            BuyEggs = true, -- If FarmEggs is true and no eggs in inventory, buy eggs automatically
-            EggTypes = {"endangered_egg"}, -- Which eggs to equip ({} = any egg, or {"cracked_egg", "royal_egg"} for specific)
+            BuyEggs = false, -- If FarmEggs is true and no eggs in inventory, buy eggs automatically
+            EggTypes = {}, -- Which eggs to equip ({} = any egg, or {"cracked_egg", "royal_egg"} for specific)
             BuyEggType = "any", -- Which egg to buy when BuyEggs is true ("any" or specific egg ID)
             MaxPets = 1, -- How many pets to equip at once (1 = free, 2 = requires Robux gamepass)
             FarmUntilFullGrown = false, -- If true, selects pets that aren't full grown first
-            PrioritizeFriendship = true, -- If true, selects pets with higher friendship level first
+            PrioritizeFriendship = false, -- If true, selects pets with higher friendship level first
             SelectiveFarm = false, -- If true, only farm pets in SelecatedPetTypes list
             SelectedPetTypes = {}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
-        },
-        EventFarm = {
-            CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
-            MochiNail = true, -- Automatically complete Mochi Nail event and buys the tool needed
         },
         AutoTrade = {
             Enabled = false, -- Enable auto trading
@@ -31,19 +26,18 @@ getgenv().Config = {
             Items = {}, -- Item IDs when TradeMode = "specific"
             ItemCounts = {}, -- Max count per item in Items array
             PetTypes = {}, -- {} = all, {"regular", "neon", "mega"}
-            PetVersionFilter = {}, -- Per-pet version filter e.g. {turtle = {"mega"}, whale = {"neon"}, cat = {"regular"}} - if pet listed here only those versions trade, otherwise falls back to global PetTypes
             Ages = {}, -- {} = all, {1, 2, 3, 4, 5, 6}
         },
         AutoNeon = {
-            Enabled = true, -- Enable auto neon/mega fusion
-            MakeMega = true, -- Fuse neons into mega neons
-            NeonAll = false, -- Neon everything possible
-            SelectedPets = {"sugarfest_2026_mochi_meow"}, -- {} when NeonAll = true, otherwise {"dog", "cat"} etc
+            Enabled = false, -- Enable auto neon/mega fusion
+            MakeMega = false, -- Fuse neons into mega neons
+            NeonAll = true, -- Neon everything possible
+            SelectedPets = {}, -- {} when NeonAll = true, otherwise {"dog", "cat"} etc
             MaxPerType = {}, -- {} = unlimited, {dog = 2, cat = 1} = limits per pet type
         },
         AutoPotion = {
-            Enabled = true, -- Use age potions on pets to level them up
-            SelectedPets = {"sugarfest_2026_mochi_meow"}, -- Pet IDs to use potions on (empty = does nothing)
+            Enabled = false, -- Use age potions on pets to level them up
+            SelectedPets = {"lny_2026_fire_foal"}, -- Pet IDs to use potions on (empty = does nothing)
         },
         AutoBuy = {
             Enabled = false, -- Automatically buy items from shops
@@ -105,7 +99,7 @@ getgenv().Config = {
             AutoShowUI = true, -- Load the UI on script start (main overlay disable for less memory usage)
             ShowOverlay = true, -- Show stats overlay (disables 3D rendering)
             ReduceGraphics = true, -- Reduce graphics quality to minimum
-            FPSCap = 0, -- FPS cap option (0 = uncapped)
+            FPSCap = 3, -- FPS cap option (0 = uncapped)
             LureId = "ice_dimension_2025_ice_soup_bait" -- what lure to use for example: "ice_dimension_2025_ice_soup_bait"
         },
         Webhook = {
