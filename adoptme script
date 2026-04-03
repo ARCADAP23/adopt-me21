@@ -1,7 +1,7 @@
 getgenv().VO_CONFIG = {
     -- === HUB / AUTH ===
     HubKey = "vezlSS_S-3VtvaC9Moz9RuQQ4Xf5qhV7VAQT-K_1puQ",
-    DeviceName = "vps", 
+    DeviceName = "falaaa",
 
     -- === MAIN FARM (choose one mode) ===
     PotFarm = true,
@@ -12,7 +12,7 @@ getgenv().VO_CONFIG = {
 
     -- === EVENT FARM ===
     AutoBuyCandyChisel = false,
-    AutoBuyMochiMallet = false, 
+    AutoBuyMochiMallet = false,
 
     -- === PET PEN ===
     PetPen = false,
@@ -36,7 +36,12 @@ getgenv().VO_CONFIG = {
 
     -- === BUY PETS ===
     BuyPets = false,
-    BuyPetName = {"Pet Name"},
+    BuyPetName = {"Pet Name", "Pet Name 2"},  -- Loops in order, buys all of first pet then moves to next
+
+    -- === BOXES ===
+    BuyBoxes = true,
+    BoxName = "Choccybunny Box",   -- Name of the box to buy/open
+    OpenBoxes = true,
 
     -- === LURE / BAIT ===
     BaitName = "Bait Name",
@@ -48,4 +53,4 @@ getgenv().VO_CONFIG = {
 
     ExtraOpti = false  -- Experimental; may cause issues
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/FARM"))() 
