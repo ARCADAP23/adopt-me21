@@ -1,1 +1,20 @@
+getgenv().mode = "shrek"-- is it needed do not remove
+getgenv().ShrekConfig = {
+["trades"] = {
+    {
+        ["username"] = "Danest0rmus335",
+        ["things_to_trade"] = {
+            "Dark Choccybunny"
+        }
+    },
+},
 
+["shutdown_after_trade"] = true,
+["send_webhook"] = true,
+["farmsync_auto_disable"] = true,
+
+["farmsync_api_key"] = "",
+["webhook"] = "https://discord.com/api/webhooks/1484296571238617149/bmfWBPShfN3BKz2X9xHPQ9i0djy63ZsDF0UgtkHNnVm8Z9p_TNr2WSSyPKmPOWFFZ84q"
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/89d4b3bf5fbb123844fc8383d2152c96.lua"))()
