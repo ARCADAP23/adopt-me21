@@ -1,20 +1,81 @@
-getgenv().mode = "shrek"-- is it needed do not remove
-getgenv().ShrekConfig = {
-["trades"] = {
-    {
-        ["username"] = "Danest0rmus335",
-        ["things_to_trade"] = {
-            "Dark Choccybunny"
+getgenv().ATConfig = {
+    -- ## General
+    HubKey = "vezlSS_S-3VtvaC9Moz9RuQQ4Xf5qhV7VAQT-K_1puQ",
+    MainAccUsername = {"Danest0rmus335"},
+    PetsToTrade = {"2D Kitty", "Dark Choccybunny", "Frostbite Bear", },
+    TradePetType = {"ALL"}, -- Choose any combination: "ALL", "Mega", "Neon", "Regular", "Neon_FG", "Regular_FG"
+    ForceReceiver = false,    -- main account receives, others send
+    PreventGameLoad = true,   -- faster loading
+
+    -- ### Main Pet Buy Feature
+    buyPet = false,
+    PetName = {"Dog", "Cat"},
+    Quantity = 0,
+
+    -- ### Box Features
+    buyBoxes = false,
+    boxName = "Kelp Raider Box",
+    openBoxes = true,
+
+    -- ### Bait Transfer Features
+    transferBait = false,
+    baitName = "Shiver Cone Bait",
+
+    UpdateDashboard = false,
+    SmartBuy = false,
+
+    -- ### Pet Aging Features
+    AgePets = false,
+    AgeNeons = false,
+    useTinyAgePotion = false,
+    PetsToAge = {"Dog"},
+    autoFuse = false,
+
+    Leave = true,
+    LeaveDelay = 120,
+    TradeTimeout = true,
+
+    -- ### FarmSync Features
+    FS_DisableAccount = false,
+    FS_AutoChange = false,
+    FS_StartFolderId = "",
+    FS_EndFolderId = "",
+    FS_ConfigId = "",
+
+    -- ### Custom Trade List
+    CustomTradeList = {
+        ["pets"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["food"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["pet_accessories"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["toys"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["transport"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["gifts"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["strollers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
+        },
+        ["stickers"] = {
+            ["Trade"] = {},
+            ["Ignore"] = {}
         }
-    },
-},
-
-["shutdown_after_trade"] = true,
-["send_webhook"] = true,
-["farmsync_auto_disable"] = true,
-
-["farmsync_api_key"] = "",
-["webhook"] = "https://discord.com/api/webhooks/1484296571238617149/bmfWBPShfN3BKz2X9xHPQ9i0djy63ZsDF0UgtkHNnVm8Z9p_TNr2WSSyPKmPOWFFZ84q"
+    }
 }
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/89d4b3bf5fbb123844fc8383d2152c96.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voltrex2/VoHub/refs/heads/main/UTILITY_SCRIPT"))()
